@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block title %}
+    Errors
+{% endblock %}
+{% block content %}
+    <div class="panel-heading">Errors</div>
+    <div class="panel-body">
+        <ul>
+            {% for error in errors %}
+                <li>{{error.name}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

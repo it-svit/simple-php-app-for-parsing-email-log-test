@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block title %}
+    Mail Addresses
+{% endblock %}
+{% block content %}
+    <div class="panel-heading">Mail Addresses</div>
+    <div class="panel-body">
+        <ul>
+            {% for error in errors %}
+                <li>{{error.name}}
+                    <ul>
+                        {% for log in error.logs %}
+                            <li> 
+                                <strong>to: </strong>{{log.to}} <strong>ctladdr: </strong>{{log.ctladdr}} 
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
